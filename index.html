@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fern</title>
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: white;
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      gap: 25px;
+    }
+    .app {
+      text-align: center;
+      cursor: pointer;
+    }
+    .app img {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      background: #222;
+      padding: 10px;
+    }
+    .app span {
+      display: block;
+      margin-top: 6px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="grid">
+  <div class="app" onclick="openSite('https://google.com')">
+    <img src="https://www.google.com/favicon.ico">
+    <span>Google</span>
+  </div>
+
+  <div class="app" onclick="openSite('https://youtube.com')">
+    <img src="https://www.youtube.com/favicon.ico">
+    <span>YouTube</span>
+  </div>
+
+  <div class="app" onclick="openSite('https://classroom.google.com')">
+    <img src="https://www.gstatic.com/classroom/favicon.png">
+    <span>Classroom</span>
+  </div>
+
+  <div class="app" onclick="openSite('https://docs.google.com')">
+    <img src="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico">
+    <span>Docs</span>
+  </div>
+</div>
+
+<script>
+  function openSite(url) {
+    window.open(url, "_blank");
+  }
+</script>
+
+</body>
+</html>
